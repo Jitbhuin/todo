@@ -1,0 +1,9 @@
+{% extends 'todo_app/add.html' %}
+{% load crispy_forms_tags %}
+{% block child %}
+<form method="post" action="{% url 'todo_app:add' %}"> {%csrf_token%}
+
+  {{form|crispy}}
+  <input type="submit" value="save"/>
+</form>
+{% endblock child %}

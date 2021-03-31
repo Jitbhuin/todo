@@ -1,0 +1,23 @@
+{% extends 'todo_app/base.html' %}
+{%block parent%}
+<div>
+    <p>Are you sure you want to delete "{{todo}}"?</p>
+<div>
+    <a href="{% url 'todo_app:add' %}">
+    <button type="submit">
+        Close
+    </button>
+</a>
+
+<form method="POST" action="">
+    {% csrf_token %}
+    <!--  <input class="btn btn-primary" type="submit" name="Confirm" />-->
+    <button type="submit" >Confirm</button>
+</form>
+</div>
+</div>
+
+
+
+{%endblock parent%}
+<h1> delete item</h1>
